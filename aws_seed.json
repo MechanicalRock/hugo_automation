@@ -1,0 +1,12 @@
+{
+  "Parameters": {
+    "RepositoryName": "<PROJECT_NAME_DASHES>",
+    "CodePipelineS3BucketName": "<PROJECT_NAME_DASHES>-pipeline",
+    "CloudFormationDeployActionRoleName": "CloudFormationDeployActionRole<PROJECT_NAME_CAMEL>",
+    "CodePipelineRoleName": "CodePipelineRole<PROJECT_NAME_CAMEL>",
+    "CodePipelineName": "CodePipeline<PROJECT_NAME_CAMEL>",
+    "StageAdministerPipelineStackName": "AdministerPipelineStack<PROJECT_NAME_CAMEL>",
+    "CodeBuildRoleName": "CodeBuildRole<PROJECT_NAME_CAMEL>",
+    "WebsiteBucketName": "<PROJECT_NAME_DASHES>"
+  }
+}

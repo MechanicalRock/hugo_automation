@@ -1,0 +1,34 @@
+[
+  {
+    "ParameterKey": "RepositoryName",
+    "ParameterValue": "<PROJECT_NAME_DASHES>"
+  },
+  {
+    "ParameterKey": "CodePipelineS3BucketName",
+    "ParameterValue": "<PROJECT_NAME_DASHES>-pipeline"
+  },
+  {
+    "ParameterKey": "CloudFormationDeployActionRoleName",
+    "ParameterValue": "CloudFormationDeployActionRole<PROJECT_NAME_CAMEL>"
+  },
+  {
+    "ParameterKey": "CodePipelineRoleName",
+    "ParameterValue": "CodePipelineRole<PROJECT_NAME_CAMEL>"
+  },
+  {
+    "ParameterKey": "CodePipelineName",
+    "ParameterValue": "CodePipeline<PROJECT_NAME_CAMEL>"
+  },
+  {
+    "ParameterKey": "StageAdministerPipelineStackName",
+    "ParameterValue": "AdministerPipelineStack<PROJECT_NAME_CAMEL>"
+  },
+  {
+    "ParameterKey": "WebsiteBucketName",
+    "ParameterValue": "<PROJECT_NAME_DASHES>"
+  },
+  {
+    "ParameterKey": "CodeBuildRoleName",
+    "ParameterValue": "CodeBuildRole<PROJECT_NAME_CAMEL>"
+  }
+]

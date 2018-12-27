@@ -1,0 +1,27 @@
+version: 0.2
+
+env:
+  variables:
+    CI: true
+    WEBSITE_BUCKET: s3://<PROJECT_NAME_DASHES>
+    HUGO_VERSION: "0.53"
+    HUGO_SHA256: "0e4424c90ce5c7a0c0f7ad24a558dd0c2f1500256023f6e3c0004f57a20ee119"
+
+phases:
+  install:
+    commands:
+      - curl -Ls https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz -o /tmp/hugo.tar.gz
+      - echo "${HUGO_SHA256}  /tmp/hugo.tar.gz" | sha256sum -c -
+      - tar xf /tmp/hugo.tar.gz -C /tmp
+      - ls -l /tmp
+      - mv /tmp/hugo /usr/bin/hugo
+      - rm -rf /tmp/hugo*
+
+  build:
+    commands:
+      - hugo
+
+  post_build:
+    commands:
+      - aws s3 sync --delete public ${WEBSITE_BUCKET} --cache-control "max-age=3600, public" --exclude "*" --include "*.html" --include "*.xml"
+      - aws s3 sync --delete public ${WEBSITE_BUCKET} --cache-control "max-age=86400, public" --exclude "*.html" --exclude "*.xml"
