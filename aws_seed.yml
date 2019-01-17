@@ -180,7 +180,7 @@ Resources:
               RunOrder: 2
         - Name: Website
           Actions:
-            - Name: Build and Deploy Hugo Website
+            - Name: BuildAndDeployHugoWebsite
               ActionTypeId:
                 Category: Build
                 Owner: AWS
