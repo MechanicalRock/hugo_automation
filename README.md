@@ -3,6 +3,8 @@
 This repo includes a bunch of cloudformation and scripts which help you get setup quickly with your
 [Hugo](https://gohugo.io) website.
 
+This repo has been archived and is no longer under active development.
+
 It will:
 1. Run an initialisation script which creates the necessary resources to run the infrastructure.
    - Create a code pipeline
